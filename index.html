@@ -17,17 +17,21 @@
             <div>
                 <nav>
                     <ul class="sidenav">
-                        <li><a class="active" href="#">Home</a></li>
-                        <li><a href="certifications.html">Certifications</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a :class="activeHome()" href="#" @click.prevent="selectedPage = 'home'">HOME</a></li>                        
+                        <li><a :class="activeEdu()" href="#" @click.prevent="selectedPage = 'education'">EDUCATION</a></li>
+                        <li><a :class="activeGallery()" href="#" @click.prevent="selectedPage = 'gallery'">GALLERY</a></li>
+                        <li><a :class="activeContact()" href="#" @click.prevent="selectedPage = 'contact'">CONTACT</a></li>
+                        <li><a :class="activeAbout()" href="#" @click.prevent="selectedPage = 'about'">ABOUT</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="content-left">
                 <div class="flex-container-header">
                     <div>
+                        <div class="grow">
                         <img :src="pictureProfile()" alt="Profile Picture of Atanu Ghorai" class="profilePhoto"
                             width="150" height="150">
+                        </div>
                         <div class="wrapper">
                             <h1>{{helloMsg}}</h1>
                         </div>
@@ -42,8 +46,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content-right">
-                <p>sfsfssfsfsf</p>
+            <div class="content-right" v-html="output">                
             </div>
         </div>
 </body>
