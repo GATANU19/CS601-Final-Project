@@ -5,19 +5,47 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Iron Man Suites</title>
-    <!-- <script defer src="https://unpkg.com/vue@3"></script> -->
+    <title>Atanu Ghorai's Page</title>
     <script defer src="./js/vue.js"></script>
     <script src="./js/main.js" type="module"></script>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
     <div id="app">
-        <h1>{{message}}</h1> 
-        <h2>{{suiteName}}</h2>               
-        <img :src="pictureHover()" @mouseover="hover = true" @mouseleave="hover = false">        
-    </div>
+        <div class="flex-container-menu">
+            <div>
+                <nav>
+                    <ul class="sidenav">
+                        <li><a class="active" href="#">Home</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content-left">
+                <div class="flex-container-header">
+                    <div>
+                        <img :src="pictureProfile()" alt="Profile Picture of Atanu Ghorai" class="profilePhoto"
+                            width="150" height="150">
+                        <div class="wrapper">
+                            <h1>{{helloMsg}}</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-container-header">
+                    <div>
+                        <h2>Bio</h2>
+                        <p>
+                            {{bioContent}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-right">
+                <p>sfsfssfsfsf</p>
+            </div>
+        </div>
 </body>
 
 </html>
